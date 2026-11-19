@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tasks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="sheet">
+    <header>
+      <h1 id="heading">Loading…</h1>
+      <p id="summary" class="muted" aria-live="polite"></p>
+    </header>
+
+    <form id="add-form">
+      <label class="sr" for="new-todo">New task</label>
+      <input id="new-todo" type="text" maxlength="200" placeholder="What needs doing?" autocomplete="off" required>
+      <button type="submit" class="primary">Add task</button>
+    </form>
+
+    <nav class="filters" aria-label="Filter tasks">
+      <button type="button" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" data-filter="active" aria-pressed="false">To do</button>
+      <button type="button" data-filter="done" aria-pressed="false">Done</button>
+    </nav>
+
+    <ul id="list"></ul>
+    <p id="status" role="alert"></p>
+
+    <footer>
+      <button type="button" id="clear-done" class="link" hidden>Clear completed</button>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
